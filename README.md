@@ -1,10 +1,13 @@
-# eyeBeam -- A tool similar as eyeWitness
+# eyeBeam
 
-## Getting Started
+A tool based in python and functional similar as eyeWitness
+
+## Installation
 
 ### Prerequisites
 
 - [Install PhantomJS on Ubuntu / Kali linux 2018 v3][1]
+
 The download file can be found in [here][2]
 
 ```
@@ -25,7 +28,9 @@ phantomjs --version
 ```
 
 - [Install Heimdall][3]
+
 Firstly, you need to install PhantomJS from above.
+
 ```
 pip install heimdall
 ```
@@ -37,7 +42,10 @@ Simply the eyeWitness is not working well and lack of maintainence.
 Try multi-threads to increase speed faster.
 
 
-Ref:
+
+
+
+
 
 [1]: https://gist.github.com/julionc/7476620
 [2]: http://phantomjs.org/download.html
