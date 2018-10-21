@@ -1,6 +1,6 @@
 # eyeBeam
 
-A tool based in python and functional similar as eyeWitness
+A tool based on python and functional similar as eyeWitness
 
 ## Installation
 
@@ -39,8 +39,8 @@ pip install heimdall
 Simply the eyeWitness is not working well and lack of maintainence.
 
 ## To Do
-Try multi-threads to increase speed faster.
-
+- Try multi-threads to increase speed faster.
+- Try upgrading to Selenium if needed.
 
 
 
@@ -50,4 +50,5 @@ Try multi-threads to increase speed faster.
 [1]: https://gist.github.com/julionc/7476620
 [2]: http://phantomjs.org/download.html
 [3]: https://github.com/DistilledLtd/heimdall
+[4]: https://selenium-python.readthedocs.io/
 

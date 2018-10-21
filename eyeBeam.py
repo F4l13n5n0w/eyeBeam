@@ -5,6 +5,11 @@
 # by F4l13n5n0w
 #
 # version 1.0
+#
+# argparse manul: https://docs.python.org/2/library/argparse.html#choices
+# Errors and Exceptions: https://docs.python.org/3/tutorial/errors.html
+# Progress bar: https://github.com/verigak/progress
+# Another Progress bar: https://pythonhosted.org/PyPrind/
 
 
 import argparse
