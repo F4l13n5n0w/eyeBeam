@@ -40,7 +40,7 @@ Simply the eyeWitness is not working well and lack of maintainence.
 
 ## To Do
 - Try multi-threads to increase speed faster.
-- Try upgrading to Selenium if needed.
+- Try upgrading to [Selenium][4] if needed.
 
 
 
