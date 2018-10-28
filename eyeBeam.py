@@ -14,13 +14,45 @@
 
 import argparse
 import sys
+import glob
 import heimdall
+from shutil import copyfile
 from progress.bar import Bar
 
 #is_verbose = 0
 output_base = '/tmp/eyeBeam_output/'
 width = '800'
 height = '600'
+
+popjs_file = 'popup.js'
+
+
+
+def generate_report(output_path):
+	copyfile('popup.js', output_path+'popup.js')
+	copyfile('style.css',output_path+'style.css')
+
+	target_html = output_path + 'report.html'
+	htmlfile = open(target_html, 'w')
+
+	htmlfile.write("<html>\n<title>eyeBeam Http(s) Screenshot report</title>\n<body>\n")
+	htmlfile.write('<script type="text/javascript" src="popup.js"></script>\n')
+	htmlfile.write('<LINK href="style.css" rel="stylesheet" type="text/css">\n')
+	htmlfile.write('<div class="table-title">\n')
+	htmlfile.write('<h3>eyeBeam Report:</h3></div>\n')
+	htmlfile.write('<table class="table-fill">\n')
+
+	file_list = glob.glob((output_path+"*.png"))
+
+	for file in file_list:
+		url = 'http://' + file.split('/')[4].split('.')[0].replace('_','.')
+		htmlfile.write(('<TR><TD><div onmouseout="clearPopup()" onmouseover="popUp(event,\''+file+'\');"><img src="'+file+'" width=200 height=200/></TD>'))
+		htmlfile.write(('<TD><a href="'+url+'">'+url+'</a></div></TD></TR>\n'))
+
+	htmlfile.write('</table></body></html>')
+	htmlfile.close()
+
+
 
 def run(args):
 	
@@ -36,6 +68,7 @@ def run(args):
 		heimdall.png(url, device=device, width=width, height=height, save_dir=output_path)
 
 	bar.finish()
+	generate_report(output_path)
 	print "[*] Finished!!"
 	print "[*] Results saved in " + output_path
 '''
