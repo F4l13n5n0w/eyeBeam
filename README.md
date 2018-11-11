@@ -35,6 +35,18 @@ Firstly, you need to install PhantomJS from above.
 pip install heimdall
 ```
 
+- Install Selenium on Kali linux 2018 v4
+
+```
+pip install progress
+pip install selenium
+wget https://github.com/mozilla/geckodriver/releases/download/v0.23.0/geckodriver-v0.23.0-linux64.tar.gz
+tar zxvf geckodriver-v0.23.0-linux64.tar.gz
+mv geckodriver /usr/local/bin/
+rm geckodriver-v0.23.0-linux64.tar.gz
+```
+
+
 ## Why eyeBeam
 Simply the eyeWitness is not working well and lack of maintainence.
 
